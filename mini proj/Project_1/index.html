@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehal's Fitness Club</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<style>
+    body{
+        color: aliceblue;
+        margin: 0px;
+        padding: 0px;
+        background: url(gym.jpg);
+        background-size: cover; 
+        font-family:'Anton', sans-serif;
+    }
+    .left div{
+        /* line-height: 10px; */
+        font-size: 16px;
+        text-align: center;
+    }
+    .left{
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        
+    }
+    .mid{
+        /* border: 2px solid rgb(51, 255, 0); */
+        display: block;
+        width: 52%;
+        margin: 20px auto
+    }
+    .right{
+        position: absolute;
+        right: 34px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid rgb(55, 0, 255); */
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 20px;
+    }
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+    .navbar li a:hover, .navbar li a.active{
+        text-decoration: underline;
+        color: gold;
+    }
+    .left img{
+        width: 100px;
+        height: 100px;
+        filter: invert();
+    }
+    .btn{
+        margin: 0px 9px;
+        background-color:black;
+        color: aliceblue;
+        padding: 4px 14px;
+        border: 2px solid white;
+        font-family:'Anton', sans-serif;
+        font-size: medium;
+        cursor: pointer;
+        border-radius: 10px;
+        
+    }
+    .btn:hover{
+        color: gold;
+    }
+    .container{
+        /* border: 2px solid white; */
+        margin: 95px auto;
+        padding: 50px;
+        width: fit-content;
+        border-radius: 28px;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .form-group input{
+        text-align: center;
+        display: block;
+        width: 250px;
+        padding: 3px;
+        margin: 11px auto;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family:'Anton', sans-serif;
+    }
+    .container button{
+        display: block;
+        width: 23%;
+        margin: 20px auto;
+        background-color: black;
+    }
+    .foot{
+        /* border: 2px solid rgb(5, 247, 234); */
+        font-size: xx-large;
+        color: aqua;
+        font-style: oblique;
+        
+    }
+</style>
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="gymicon.jpg" alt="">
+            <div>Snehal Fitness</div>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <button class="btn">Call us Now</button><button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best Gym of India now !</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your City">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="foot">
+        <marquee behavior="" direction="right">JOIN ASAP!!</marquee>
+    </div>>
+    
+</body>
+</html>

@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    border: 10px solid rgb(31, 12, 29);
+    /* background-image: url("https://www.citizenshospitals.com/wp-content/uploads/2017/04/medical-doctor-stethoscope-and-office-sign-web-header-1.jpg"); */
+
+
+
+}
+
+.left {
+    border: 2px solid rgb(0, 0, 0);
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 5px 5px;
+}
+
+.mid {
+    /* border: 4px solid rgb(0, 0, 0); */
+    display: inline-block;
+    position: absolute;
+    right: 220px;
+    top: 8%;
+    font-size: x-large;
+
+}
+
+.mid a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.mid a:hover {
+    color: rgb(0, 145, 255);
+    font-weight: bolder;
+}
+
+.right {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 42px;
+    cursor: pointer;
+}
+
+#bookbtn {
+    position: relative;
+    left: 20px;
+    top: 6px;
+}
+
+#book {
+    height: 63px;
+    display: inline-block;
+    width: 216px;
+    background-color: rgb(192, 0, 109);
+    left: 1335px;
+    position: relative;
+    border: solid 8px black;
+    margin: -15px;
+    z-index: 10;
+}
+
+.carousel {
+    position: relative;
+    top: -38px;
+    z-index: 5;
+}
+
+/* -------------form decoration------------------------ */
+
+.appointRegister {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 271px;
+        
+}
+
+.register {
+    background-color: #00000085;
+    color: white;
+    height: 45px;
+    width: 919px;
+    margin: auto 28px;
+    text-align: -webkit-center;
+}
+
+.appoint {
+    height: 407px;
+    width: 915px;
+    background-color: rgb(109 191 210 / 31%);
+    border: 2px solid #00000054;
+    margin: auto 28px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 60px;
+}
+
+.bcimage {
+    background-image: url(https://mchwebstorage.blob.core.windows.net/mch-website/images/og/c90dbbd4-12f2-4f8e-a5aa-6dd6dce968e7.jpg);
+    margin: 32px;
+    padding: 0;
+    height: 579px;
+    position: absolute;
+    top: 124px;
+    width: 100%;
+    left: -33px;
+    z-index: 0;
+}
+#wecareimg{
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    width: 210px;
+    left: 34px;
+    top: 85px;
+   
+    animation-name:wecareanimate ;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+@keyframes wecareanimate{
+   
+    from{
+        /* transform-origin: 0;
+        transform: translate(opx,0px); */
+        top: 95px;
+    }
+    to{
+        top: 150px;
+        /* transform: translate(opx,40px); */
+    }
+}
+
+.fname{
+    background-color: #87ceeb54; ;
+text-align: center;
+padding: 20px 22px;
+}
+.lname{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+.gender{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+.dob{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+.age{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+.contact{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+.email{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+.nationality{
+        background-color: #87ceeb54; ;
+    text-align: center;
+    padding: 20px 22px;
+    }
+    #submitbtn{
+        display: inline-block;
+    position: absolute;
+    background-color: rgb(255 0 0 / 74%);
+    border: solid 2px black;
+    /* border-radius: 1px; */
+    color: black;
+    margin: -19px 704px;
+    padding: 12px 30px;
+    }
+    

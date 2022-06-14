@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+</head>
+<link rel="stylesheet" href="HMS_style.css">
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="hmsicon.png" alt="icon" width="80px" height="80px">
+            <div>Hospital</div>
+        </div>
+        <div class="mid">
+            <nav>
+                <a href="">HOME</a>
+                <a href="">REGISTRATION</a>
+                <a href="">DOCTOR</a>
+                <a href="">APPOINTMENT</a>
+                <a href="">ABOUT US</a>
+                <a href="">HELP</a>
+            </nav>
+        </div>
+        <div class="right">
+            <a href="https://www.google.com"><img src="erlogo.png" alt="erlogo"></a>
+        </div>
+    </header>
+
+    <section class="padding">
+        <main>
+            <div class="page-head">
+                <h2 class="breadcrumb"><a href="https://www.alexishospital.com/">Home </a>\ BOOK AN APPOINTMENT </h2>
+            </div>
+            <div class="fullwidth margin-bottom-50">
+                <div class="content-wrapper">
+
+                    <script>
+                        $(document).ready(function () {
+                            $("#txt_age").keydown(function (e) {
+                                // Allow: backspace, delete, tab, escape, enter and .
+                                if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                                    // Allow: Ctrl/cmd+A
+                                    (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                    // Allow: Ctrl/cmd+C
+                                    (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                    // Allow: Ctrl/cmd+X
+                                    (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                    // Allow: home, end, left, right
+                                    (e.keyCode >= 35 && e.keyCode <= 39)) {
+                                    // let it happen, don't do anything
+                                    return;
+                                }
+                                // Ensure that it is a number and stop the keypress
+                                if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                                    e.preventDefault();
+                                }
+                            });
+                        });
+
+                    </script>
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+                    <style type="text/css">
+                        .msgs {
+                            padding: 1px;
+                            background: #04ACE9;
+                            color: #FFFFFF;
+                        }
+
+                        .red {
+                            color: #ff0000;
+                        }
+
+                        .styleinfo {
+                            color: #F00;
+                            font-weight: bold;
+                            font-style: italic;
+                            font-size: 14px;
+
+
+                        }
+                    </style>
+
+                </div>
+                <!--/page-title -->
+
+
+                <!--content-wrapper -->
+                <div class="content-wrapper">
+
+
+
+
+
+
+
+                    <!--tabBlock -->
+                    <div class="tabBlock">
+
+                        <ul class="tabBlock-tabs">
+                            <li class="tabBlock-tab is-active">Unregistered Patient</li>
+                            <li class="tabBlock-tab">Registered Patient</li>
+                        </ul>
+
+                        <!--tabBlock-content -->
+                        <div class="tabBlock-content">
+
+
+                            <!--tab01 -->
+                            <div class="tabBlock-pane">
+
+
+                                <form id="unregForm" name="unregForm" method="post" action="">
+                                    <!--row -->
+                                    <div class="row">
+                                        <!--half col -->
+
+
+                                        <div class="two-col">
+                                            First Name <span class="red">*</span><br>
+                                            <input name="txt_name" type="text" id="txt_name" required
+                                                title="Please Enter First Name" pattern="[a-zA-Z0-9 ]+" value=""
+                                                class="fieldset" />
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+
+                                        <div class="two-col last">
+                                            Last Name<br>
+
+                                            <input name="txt_last" type="text" id="txt_last" pattern="[a-zA-Z0-9 ]+"
+                                                class="fieldset" value="" />
+                                        </div>
+
+
+                                        <div class="two-col">
+
+                                            Gender<span class="red">*</span><br>
+
+                                            <select name="select_gender" required title="Please Select Gender"
+                                                class="fieldset" id="select_gender">
+                                                <option value="" selected="selected">Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <br /><span class="styleinfo"></span>
+
+                                        </div>
+                                        <div class="two-col last">
+
+                                            Date of Birth<br>
+                                            <input name="txt_dob" type="text" class="fieldset" id="txt_dob"
+                                                placeholder="DD/MM/YYYY" value="" maxlength="12" />
+
+                                        </div>
+                                        <div class="two-col">
+                                            Age<br>
+                                            <input name="txt_age" type="text" class="fieldset" id="txt_age"
+                                                maxlength="2" value="" />
+
+
+                                        </div>
+
+                                        <div class="two-col last">
+
+
+                                            Contact No <span class="red">*</span><br>
+                                            <input name="txt_contact" type="text" pattern=".{10,14}" required
+                                                title="10 numbers minimum" value="" class="fieldset" id="txt_contact" />
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <div class="two-col">
+                                            Nationality <span class="red">*</span><br>
+
+                                            <select name="select_nationality" id="select_nationality" required
+                                                title="Please Select Nationality" class="fieldset">
+                                                <option value="">Select Nationality</option>
+                                                <option value="Afghanistan">Afghanistan</option>
+                                                <option value="Albania">Albania</option>
+                                                <option value="Algeria">Algeria</option>
+                                                <option value="American Samoa">American Samoa</option>
+                                                <option value="Andorra">Andorra</option>
+                                                <option value="Angola">Angola</option>
+                                                <option value="Anguilla">Anguilla</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Armenia">Armenia</option>
+                                                <option value="Aruba">Aruba</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                <option value="Azores">Azores</option>
+                                                <option value="Bahamas">Bahamas</option>
+                                                <option value="Bahrain">Bahrain</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="Barbados">Barbados</option>
+                                                <option value="Belarus">Belarus</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Belize">Belize</option>
+                                                <option value="Benin">Benin</option>
+                                                <option value="Bermuda">Bermuda</option>
+                                                <option value="Bhutan">Bhutan</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Bonaire">Bonaire</option>
+                                                <option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina
+                                                </option>
+                                                <option value="Botswana">Botswana</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="British Indian Ocean Ter">British Indian Ocean Ter
+                                                </option>
+                                                <option value="Brunei">Brunei</option>
+                                                <option value="Bulgaria">Bulgaria</option>
+                                                <option value="Burkina Faso">Burkina Faso</option>
+                                                <option value="Burundi">Burundi</option>
+                                                <option value="Cambodia">Cambodia</option>
+                                                <option value="Cameroon">Cameroon</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Canary Islands">Canary Islands</option>
+                                                <option value="Cape Verde">Cape Verde</option>
+                                                <option value="Cayman Islands">Cayman Islands</option>
+                                                <option value="Central African Republic">Central African Republic
+                                                </option>
+                                                <option value="Chad">Chad</option>
+                                                <option value="Channel Islands">Channel Islands</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="China">China</option>
+                                                <option value="Christmas Island">Christmas Island</option>
+                                                <option value="Cocos Island">Cocos Island</option>
+                                                <option value="Columbia">Columbia</option>
+                                                <option value="Comoros">Comoros</option>
+                                                <option value="Congo">Congo</option>
+                                                <option value="Cook Islands">Cook Islands</option>
+                                                <option value="Costa Rica">Costa Rica</option>
+                                                <option value="Cote D'Ivoire">Cote D'Ivoire</option>
+                                                <option value="Croatia">Croatia</option>
+                                                <option value="Cuba">Cuba</option>
+                                                <option value="Curacao">Curacao</option>
+                                                <option value="Cyprus">Cyprus</option>
+                                                <option value="Czech Republic">Czech Republic</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Djibouti">Djibouti</option>
+                                                <option value="Dominica">Dominica</option>
+                                                <option value="Dominican Republic">Dominican Republic</option>
+                                                <option value="East Timor">East Timor</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Egypt">Egypt</option>
+                                                <option value="El Salvador">El Salvador</option>
+                                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                <option value="Eritrea">Eritrea</option>
+                                                <option value="Estonia">Estonia</option>
+                                                <option value="Ethiopia">Ethiopia</option>
+                                                <option value="Falkland Islands">Falkland Islands</option>
+                                                <option value="Faroe Islands">Faroe Islands</option>
+                                                <option value="Fiji">Fiji</option>
+                                                <option value="France">France</option>
+                                                <option value="French Guiana">French Guiana</option>
+                                                <option value="French Polynesia">French Polynesia</option>
+                                                <option value="French Southern Ter">French Southern Ter</option>
+                                                <option value="Gabon">Gabon</option>
+                                                <option value="Gambia">Gambia</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Ghana">Ghana</option>
+                                                <option value="Gibraltar">Gibraltar</option>
+                                                <option value="Greece">Greece</option>
+                                                <option value="Greenland">Greenland</option>
+                                                <option value="Grenada">Grenada</option>
+                                                <option value="Guadeloupe">Guadeloupe</option>
+                                                <option value="Guam">Guam</option>
+                                                <option value="Guatemala">Guatemala</option>
+                                                <option value="Guinea">Guinea</option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Haiti">Haiti</option>
+                                                <option value="Hawaii">Hawaii</option>
+                                                <option value="Honduras">Honduras</option>
+                                                <option value="Hong Kong">Hong Kong</option>
+                                                <option value="Hungary">Hungary</option>
+                                                <option value="Iceland">Iceland</option>
+                                                <option value="India">India</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Iran">Iran</option>
+                                                <option value="Iraq">Iraq</option>
+                                                <option value="Ireland">Ireland</option>
+                                                <option value="Isle of Man">Isle of Man</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Jamaica">Jamaica</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Jordan">Jordan</option>
+                                                <option value="Kazakhstan">Kazakhstan</option>
+                                                <option value="Kenya">Kenya</option>
+                                                <option value="Kiribati">Kiribati</option>
+                                                <option value="Korea North">Korea North</option>
+                                                <option value="Korea South">Korea South</option>
+                                                <option value="Kuwait">Kuwait</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Laos">Laos</option>
+                                                <option value="Latvia">Latvia</option>
+                                                <option value="Lebanon">Lebanon</option>
+                                                <option value="Lesotho">Lesotho</option>
+                                                <option value="Liberia">Liberia</option>
+                                                <option value="Libya">Libya</option>
+                                                <option value="Liechtenstein">Liechtenstein</option>
+                                                <option value="Lithuania">Lithuania</option>
+                                                <option value="Luxembourg">Luxembourg</option>
+                                                <option value="Macau">Macau</option>
+                                                <option value="Macedonia">Macedonia</option>
+                                                <option value="Madagascar">Madagascar</option>
+                                                <option value="Malawi">Malawi</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Maldives">Maldives</option>
+                                                <option value="Mali">Mali</option>
+                                                <option value="Malta">Malta</option>
+                                                <option value="Marshall Islands">Marshall Islands</option>
+                                                <option value="Martinique">Martinique</option>
+                                                <option value="Mauritania">Mauritania</option>
+                                                <option value="Mauritius">Mauritius</option>
+                                                <option value="Mayotte">Mayotte</option>
+                                                <option value="Mexico">Mexico</option>
+                                                <option value="Midway Islands">Midway Islands</option>
+                                                <option value="Moldova">Moldova</option>
+                                                <option value="Monaco">Monaco</option>
+                                                <option value="Mongolia">Mongolia</option>
+                                                <option value="Montserrat">Montserrat</option>
+                                                <option value="Morocco">Morocco</option>
+                                                <option value="Mozambique">Mozambique</option>
+                                                <option value="Myanmar">Myanmar</option>
+                                                <option value="Nambia">Nambia</option>
+                                                <option value="Nauru">Nauru</option>
+                                                <option value="Nepal">Nepal</option>
+                                                <option value="Netherland Antilles">Netherland Antilles</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="Nevis">Nevis</option>
+                                                <option value="New Caledonia">New Caledonia</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Nicaragua">Nicaragua</option>
+                                                <option value="Niger">Niger</option>
+                                                <option value="Nigeria">Nigeria</option>
+                                                <option value="Niue">Niue</option>
+                                                <option value="Norfolk Island">Norfolk Island</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Oman">Oman</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                                <option value="Palau Island">Palau Island</option>
+                                                <option value="Palestine">Palestine</option>
+                                                <option value="Panama">Panama</option>
+                                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Philippines">Philippines</option>
+                                                <option value="Pitcairn Island">Pitcairn Island</option>
+                                                <option value="Poland">Poland</option>
+                                                <option value="Portugal">Portugal</option>
+                                                <option value="Puerto Rico">Puerto Rico</option>
+                                                <option value="Qatar">Qatar</option>
+                                                <option value="Reunion">Reunion</option>
+                                                <option value="Romania">Romania</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Rwanda">Rwanda</option>
+                                                <option value="Saipan">Saipan</option>
+                                                <option value="Samoa">Samoa</option>
+                                                <option value="San Marino">San Marino</option>
+                                                <option value="Sao Tome &amp; Principe">Sao Tome &amp; Principe</option>
+                                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                                <option value="Senegal">Senegal</option>
+                                                <option value="Serbia &amp; Montenegro">Serbia &amp; Montenegro</option>
+                                                <option value="Seychelles">Seychelles</option>
+                                                <option value="Sierra Leone">Sierra Leone</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Slovakia">Slovakia</option>
+                                                <option value="Slovenia">Slovenia</option>
+                                                <option value="Solomon Islands">Solomon Islands</option>
+                                                <option value="Somalia">Somalia</option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="Spain">Spain</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="St Barthelemy">St Barthelemy</option>
+                                                <option value="St Eustatius">St Eustatius</option>
+                                                <option value="St Helena">St Helena</option>
+                                                <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                                                <option value="St Lucia">St Lucia</option>
+                                                <option value="St Maarten">St Maarten</option>
+                                                <option value="St Pierre &amp; Miquelon">St Pierre &amp; Miquelon
+                                                </option>
+                                                <option value="St Vincent &amp; Grenadines">St Vincent &amp; Grenadines
+                                                </option>
+                                                <option value="Sudan">Sudan</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Swaziland">Swaziland</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Syria">Syria</option>
+                                                <option value="Tahiti">Tahiti</option>
+                                                <option value="Taiwan">Taiwan</option>
+                                                <option value="Tajikistan">Tajikistan</option>
+                                                <option value="Tanzania">Tanzania</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Togo">Togo</option>
+                                                <option value="Tokelau">Tokelau</option>
+                                                <option value="Tonga">Tonga</option>
+                                                <option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
+                                                <option value="Tunisia">Tunisia</option>
+                                                <option value="Turkey">Turkey</option>
+                                                <option value="Turkmenistan">Turkmenistan</option>
+                                                <option value="Turks &amp; Caicos Is">Turks &amp; Caicos Is</option>
+                                                <option value="Tuvalu">Tuvalu</option>
+                                                <option value="Uganda">Uganda</option>
+                                                <option value="Ukraine">Ukraine</option>
+                                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="USA">USA</option>
+                                                <option value="Uzbekistan">Uzbekistan</option>
+                                                <option value="Vanuatu">Vanuatu</option>
+                                                <option value="Vatican City State">Vatican City State</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                                <option value="Vietnam">Vietnam</option>
+                                                <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                                                <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                                <option value="Wake Island">Wake Island</option>
+                                                <option value="Wallis &amp; Futana Island">Wallis &amp; Futana Island
+                                                </option>
+                                                <option value="Yemen">Yemen</option>
+                                                <option value="Zaire">Zaire</option>
+                                                <option value="Zambia">Zambia</option>
+                                                <option value="Zimbabwe">Zimbabwe</option>
+                                            </select>
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <!--/half col -->
+
+                                        <!--half col lst -->
+                                        <div class="two-col last">
+
+
+
+                                            Email <span class="red">*</span><br>
+                                            <input name="txt_email" type="email" id="txt_email" required
+                                                title="Please Enter Email" value="" class="fieldset" />
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <!--/half col lst -->
+
+
+                                    </div>
+                                    <!--/row -->
+
+
+                                    <!--row -->
+                                    <div class="row">
+                                        <hr>
+                                        <h2 class="subheading">Please provide correct Contact number and Email Id as we
+                                            will revert to confirm. </h2>
+
+                                        <!--/half col -->
+                                        <div class="two-col">
+                                            Patient Type<span class="red">*</span><br><br>
+                                            <input name="ptype" type="radio" required title="Please Select Patient Type"
+                                                value="Self Paying" />
+                                            Self Paying Patient &nbsp;
+                                            <input name="ptype" required title="Please Select Patient Type" type="radio"
+                                                value="Insurance Patient" />
+                                            Insurance - Patient
+                                            <br><br>
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+
+                                        <div class="two-col last">
+                                            Department<span class="red">*</span><br>
+                                            <select name="select_dept" id="select_dept" title="Please Select Department"
+                                                required class="fieldset">
+                                                <option value="" selected="selected">Select Department</option>
+                                                <option value="38"> Alexis Emergency & Trauma Care </option>
+                                                <option value="36"> Anaesthesia & Critical Care </option>
+                                                <option value="11"> Bariatric Surgery </option>
+                                                <option value="1"> Cardiac Sciences </option>
+                                                <option value="26"> Dental & Oral Surgery </option>
+                                                <option value="9"> Dermatology & Cosmetology </option>
+                                                <option value="3"> Endocrinology </option>
+                                                <option value="22"> ENT, Head Neck Surgery </option>
+                                                <option value="5"> Gastroenterology </option>
+                                                <option value="6"> General & Laproscopic Surgery </option>
+                                                <option value="25"> Gynecology & Obstetrics </option>
+                                                <option value="4"> Internal Medicine & Infectious diseases </option>
+                                                <option value="43"> Medical Oncology </option>
+                                                <option value="2"> Nephrology </option>
+                                                <option value="18"> Neurosciences </option>
+                                                <option value="39"> Nutrition & Lifestyle Management </option>
+                                                <option value="28"> Ophthalmology </option>
+                                                <option value="27"> Orthopedics & Sports Medicine </option>
+                                                <option value="10"> Paediatric & Neonatology </option>
+                                                <option value="13"> Pathology </option>
+                                                <option value="23"> Physiotherapy and Rehabilitation </option>
+                                                <option value="45"> Psychiatry </option>
+                                                <option value="40"> Pulmonology </option>
+                                                <option value="46"> Radiation Oncology </option>
+                                                <option value="30"> Radiology </option>
+                                                <option value="31"> Rheumatology, Physical Medicine </option>
+                                                <option value="44"> Surgical Oncology </option>
+                                                <option value="24"> Urology </option>
+                                            </select>
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <div class="two-col">
+                                            Doctor Name<span class="red">*</span><br>
+
+
+                                            <select name="select_doctor" id="select_doctor" required
+                                                title="Please Select Doctor" class="fieldset">
+                                                <option value="">Select Doctor</option>
+
+                                            </select>
+
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <!--/half col -->
+
+
+
+
+                                        <!--/half col lst -->
+                                        <div class="two-col last">
+
+
+
+
+
+                                            Appointment Time<br>
+                                            <select name="select_time" id="select_time" title="Please Select Time"
+                                                class="fieldset" required>
+                                                <option value="">Select Time</option>
+                                                <!--  <option value="7.00 A.M">7.00 A.M</option>
+          <option value="7.30 A.M">7.30 A.M</option>
+          <option value="8.00 A.M">8.00 A.M</option>
+          <option value="8.30 A.M">8.30 A.M</option>-->
+                                                <option value="10.00 A.M">10.00 A.M</option>
+                                                <option value="10.30 A.M">10.30 A.M</option>
+                                                <option value="11.00 A.M">11.00 A.M</option>
+                                                <option value="11.30 A.M">11.30 A.M</option>
+                                                <option value="12.00 P.M">12.00 P.M</option>
+                                                <option value="12.30 P.M">12.30 P.M</option>
+                                                <option value="1.00 P.M">1.00 P.M</option>
+                                                <option value="1.30 P.M">1.30 P.M</option>
+                                                <option value="2.00 P.M">2.00 P.M</option>
+                                                <option value="2.30 P.M">2.30 P.M</option>
+                                                <option value="3.00 P.M">3.00 P.M</option>
+                                                <option value="3.30 P.M">3.30 P.M</option>
+                                                <option value="4.00 P.M">4.00 P.M</option>
+                                                <option value="4.30 P.M">4.30 P.M</option>
+                                                <option value="5.00 P.M">5.00 P.M</option>
+                                                <option value="5.30 P.M">5.30 P.M</option>
+                                                <option value="6.00 P.M">6.00 P.M</option>
+                                                <!--  <option value="6.30 P.M">6.30 P.M</option>
+          <option value="7.00 P.M">7.00 P.M</option>
+          <option value="7.30 P.M">7.30 P.M</option>
+          <option value="8.00 P.M">8.00 P.M</option>
+          <option value="8.30 P.M">8.30 P.M</option>
+          <option value="9.00 P.M">9.00 P.M</option>
+          <option value="9.30 P.M">9.30 P.M</option>
+          <option value="10.00 P.M">10.00 P.M</option>
+          <option value="10.30 P.M">10.30 P.M</option>
+           <option value="11.00 P.M">11.00 P.M</option>-->
+                                            </select>
+
+
+                                        </div>
+                                        <div class="two-col ">
+                                            Appointment Date<br>
+
+                                            <input name="txt_appdate" type="text" required class="fieldset"
+                                                id="txt_appdate" placeholder="DD/MM/YYYY" value="" maxlength="12" />
+
+                                        </div>
+
+                                        <div class="two-col last">
+
+                                            <div class="g-recaptcha" style="transform:scale(0.7);transform-origin:0;-webkit-transform:scale(0.7);
+        transform:scale(0.7);-webkit-transform-origin:0 0;transform-origin:0 0;"
+                                                data-sitekey="6LdoSloUAAAAAMQSKjjdCyhnaw_R_bAmUV7W93Rv"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+
+                                        <div class="two-col">
+
+                                            <input name="unreg_btn" type="submit" id="unreg_btn" value="Confirm"
+                                                class="btn" />&nbsp;&nbsp;
+                                            <input name="Cancel_btn" type="reset" id="Cancel_btn" value=" Reset "
+                                                class="btn" />
+                                        </div>
+
+
+                                        <div class="two-col last">
+
+                                        </div>
+
+
+
+                                        <!--/half col lst -->
+
+
+                                    </div>
+                                    <!--/row -->
+                                </form>
+
+                            </div>
+                            <!--/tab01 -->
+
+
+
+
+
+
+
+                            <!--tab02 -->
+                            <div class="tabBlock-pane">
+
+
+
+                                <form id="regForm" name="regForm" method="post" action="">
+
+                                    <!--row -->
+                                    <div class="row">
+                                        <!--half col -->
+                                        <div class="two-col">
+
+
+                                            Email <span class="red">*</span><br>
+
+                                            <input name="txt_email1" type="email" required id="txt_email1"
+                                                title="Please Enter Email" value="" class="fieldset" />
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <!--/half col -->
+
+                                        <!--half col lst -->
+                                        <div class="two-col last">
+                                            Pin <span class="red">*</span><br>
+                                            <input name="txt_pin" type="text" id="txt_pin" required
+                                                title="Please Enter PIN" minlength="10" maxlength="10" value=""
+                                                class="fieldset" />
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <!--/half col lst -->
+
+
+                                    </div>
+                                    <!--/row -->
+
+
+                                    <!--row -->
+                                    <div class="row">
+                                        <hr>
+                                        <h2 class="subheading">Please provide correct Contact number and Email Id as we
+                                            will revert to confirm. </h2>
+
+                                        <!--/half col -->
+                                        <div class="two-col">
+
+                                            Contact No. <span class="red">*</span><br>
+                                            <input name="txt_contact1" type="text" pattern=".{10,14}" required
+                                                id="txt_contact1" value="" title="7 numbers minimum" class="fieldset" />
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <div class="two-col last">
+                                            Patient Type<span class="red">*</span><br><br>
+                                            <input name="ptype1" type="radio" required
+                                                title="Please Select Patient Type" value="Self Paying" />
+                                            Self Paying Patient &nbsp; <input name="ptype1" type="radio" required
+                                                title="Please Select Patient Type" value="Insurance Patient" />
+                                            Insurance - Patient
+                                            <br> <br>
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <div class="two-col">
+                                            Department<span class="red">*</span><br>
+                                            <select name="select_dept1" id="select_dept1" required
+                                                title="Please Select Department" class="fieldset">
+                                                <option value="">Select Department</option>
+                                                <option value="38"> Alexis Emergency & Trauma Care </option>
+                                                <option value="36"> Anaesthesia & Critical Care </option>
+                                                <option value="11"> Bariatric Surgery </option>
+                                                <option value="1"> Cardiac Sciences </option>
+                                                <option value="26"> Dental & Oral Surgery </option>
+                                                <option value="9"> Dermatology & Cosmetology </option>
+                                                <option value="3"> Endocrinology </option>
+                                                <option value="22"> ENT, Head Neck Surgery </option>
+                                                <option value="5"> Gastroenterology </option>
+                                                <option value="6"> General & Laproscopic Surgery </option>
+                                                <option value="25"> Gynecology & Obstetrics </option>
+                                                <option value="4"> Internal Medicine & Infectious diseases </option>
+                                                <option value="43"> Medical Oncology </option>
+                                                <option value="2"> Nephrology </option>
+                                                <option value="18"> Neurosciences </option>
+                                                <option value="39"> Nutrition & Lifestyle Management </option>
+                                                <option value="28"> Ophthalmology </option>
+                                                <option value="27"> Orthopedics & Sports Medicine </option>
+                                                <option value="10"> Paediatric & Neonatology </option>
+                                                <option value="13"> Pathology </option>
+                                                <option value="23"> Physiotherapy and Rehabilitation </option>
+                                                <option value="45"> Psychiatry </option>
+                                                <option value="40"> Pulmonology </option>
+                                                <option value="46"> Radiation Oncology </option>
+                                                <option value="30"> Radiology </option>
+                                                <option value="31"> Rheumatology, Physical Medicine </option>
+                                                <option value="44"> Surgical Oncology </option>
+                                                <option value="24"> Urology </option>
+
+                                            </select>
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <div class="two-col last">
+                                            Doctor Name<span class="red">*</span><br>
+
+                                            <select name="select_doctor1" id="select_doctor1"
+                                                title="Please Select Doctor" class="fieldset">
+                                                <option value="">Select Doctor</option>
+
+                                            </select>
+                                            <br /><span class="styleinfo"></span>
+                                        </div>
+                                        <div class="two-col">
+                                            Appointment Date<br>
+                                            <input name="txt_appdate1" type="text" required class="fieldset"
+                                                id="txt_appdate1" value="" placeholder="DD/MM/YYYY" maxlength="12" />
+                                        </div>
+                                        <!--/half col -->
+
+
+
+
+                                        <!--/half col lst -->
+                                        <div class="two-col last">
+
+
+
+
+
+
+
+
+                                            Appointment Time<br>
+                                            <select name="select_time1" id="select_time1" title="Please Select Time"
+                                                class="fieldset" required>
+                                                <option value="">Select Time</option>
+                                                <!--  <option value="7.00 A.M">7.00 A.M</option>
+          <option value="7.30 A.M">7.30 A.M</option>
+          <option value="8.00 A.M">8.00 A.M</option>
+          <option value="8.30 A.M">8.30 A.M</option>-->
+                                                <option value="10.00 A.M">10.00 A.M</option>
+                                                <option value="10.30 A.M">10.30 A.M</option>
+                                                <option value="11.00 A.M">11.00 A.M</option>
+                                                <option value="11.30 A.M">11.30 A.M</option>
+                                                <option value="12.00 P.M">12.00 P.M</option>
+                                                <option value="12.30 P.M">12.30 P.M</option>
+                                                <option value="1.00 P.M">1.00 P.M</option>
+                                                <option value="1.30 P.M">1.30 P.M</option>
+                                                <option value="2.00 P.M">2.00 P.M</option>
+                                                <option value="2.30 P.M">2.30 P.M</option>
+                                                <option value="3.00 P.M">3.00 P.M</option>
+                                                <option value="3.30 P.M">3.30 P.M</option>
+                                                <option value="4.00 P.M">4.00 P.M</option>
+                                                <option value="4.30 P.M">4.30 P.M</option>
+                                                <option value="5.00 P.M">5.00 P.M</option>
+                                                <option value="5.30 P.M">5.30 P.M</option>
+                                                <option value="6.00 P.M">6.00 P.M</option>
+                                                <option value="6.30 P.M">6.30 P.M</option>
+                                                <option value="7.00 P.M">7.00 P.M</option>
+                                                <option value="7.30 P.M">7.30 P.M</option>
+                                                <option value="8.00 P.M">8.00 P.M</option>
+                                                <option value="8.30 P.M">8.30 P.M</option>
+                                                <option value="9.00 P.M">9.00 P.M</option>
+                                                <!--  <option value="9.30 P.M">9.30 P.M</option>
+          <option value="10.00 P.M">10.00 P.M</option>
+          <option value="10.30 P.M">10.30 P.M</option>
+           <option value="11.00 P.M">11.00 P.M</option>-->
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="two-col">
+                                            <div class="g-recaptcha" style="transform:scale(0.7);transform-origin:0;-webkit-transform:scale(0.7);
+        transform:scale(0.7);-webkit-transform-origin:0 0;transform-origin:0 0;"
+                                                data-sitekey="6LdoSloUAAAAAMQSKjjdCyhnaw_R_bAmUV7W93Rv"></div>
+                                            <input name="reg_btn" type="submit" id="reg_btn" value="Submit"
+                                                class="btn" />&nbsp;&nbsp;
+                                            <input name="Cancel_btn" type="reset" id="Cancel_btn" value=" Reset "
+                                                class="btn" />
+                                        </div>
+
+
+                                        <div class="two-col last">
+
+                                        </div>
+
+
+                                    </div>
+                                    <!--/half col lst -->
+
+
+                            </div>
+                            </form>
+
+                            <!--/row -->
+
+
+                        </div>
+                        <!--/tab02 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <!--/tabBlock-content -->
+
+
+
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+</body>
+
+</html>
