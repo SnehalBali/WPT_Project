@@ -5,13 +5,15 @@
 }
 
 .header {
-    background-color: rgb(255, 255, 255);
-    border: 10px solid rgb(31, 12, 29);
+    background-image: linear-gradient(#F9E7FE,#DAFCFC);
+    /* background-image: url("headimage.jpg"); */
+    /* border: 10px solid rgb(31, 12, 29); */
     /* background-image: url("https://www.citizenshospitals.com/wp-content/uploads/2017/04/medical-doctor-stethoscope-and-office-sign-web-header-1.jpg"); */
 
 
 
 }
+
 
 .left {
     border: 2px solid rgb(0, 0, 0);
@@ -21,24 +23,26 @@
 }
 
 .mid {
-    /* border: 4px solid rgb(0, 0, 0); */
+    border: 4px solid rgb(0, 0, 0); 
     display: inline-block;
     position: absolute;
     right: 220px;
-    top: 8%;
+    top: 80px;
+    width: fit-content;
     font-size: x-large;
+   
 
 }
 
-.mid a {
+.mid a{
     padding: 10px 20px;
     text-decoration: none;
     color: black;
 }
 
-.mid a:hover {
+ .mid a:hover {
     color: rgb(0, 145, 255);
-    font-weight: bolder;
+   font-weight: bolder;
 }
 
 .right {
@@ -49,23 +53,85 @@
     cursor: pointer;
 }
 
-#bookbtn {
-    position: relative;
-    left: 20px;
-    top: 6px;
+.dropdown {
+    float: none;
+    overflow: visible;
+    width: max-content;
 }
 
-#book {
-    height: 63px;
-    display: inline-block;
-    width: 216px;
-    background-color: rgb(192, 0, 109);
-    left: 1335px;
-    position: relative;
-    border: solid 8px black;
-    margin: -15px;
-    z-index: 10;
+/* Dropdown button */
+.dropdown, .dropbtn {
+    font-size: x-large;
+    border: none;
+    outline: none;
+    color: rgb(8, 8, 8);
+    padding: 0px 8px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
 }
+
+.dropbtn:hover{
+    color: rgb(0, 145, 255);
+    font-weight: bolder;
+}
+
+.dropcontent {
+    display: none;
+    font-size: 16px;
+    position:  absolute;
+    left: 50px;
+    background-color: #b5edf1;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(241, 167, 167, 0.2);
+    z-index: 6;
+}
+
+.dropcontent a {
+    float: none;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  /* Add a grey background color to dropdown links on hover */
+.dropcontent a:hover {
+    background-color: rgb(12, 15, 168);
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropcontent{
+    color: aqua;
+    display: block;
+  }
+
+
+
+/* #bookbtn {
+   
+} */
+
+#book {
+    border: 2px solid black;
+    max-width: fit-content;
+    color: aqua;
+    position: sticky; 
+    size: 100px;
+    right: 0px;
+    left: 1500px;
+    top: 0px;
+    margin: 2px;
+    padding: 5px; 
+    z-index: 10;
+    align-content: center;
+    /* transform: translate(0%,100%); */
+}
+#bookbtn{
+   
+}
+
 
 .carousel {
     position: relative;
@@ -191,5 +257,53 @@ padding: 20px 22px;
     color: black;
     margin: -19px 704px;
     padding: 12px 30px;
+    }
+
+    /* ------------------------------------- */
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 1px;
+    }
+
+    .grid-item{
+        /* border: 1px solid black; */
+        padding: 20px;
+        /* font-size: 30px; */
+        text-align: justify;
+    }
+
+    /* ------------------------- */
+    .imgcp{
+        width: 100px;
+    }
+
+    .bottombtn{
+        display: block;
+        text-align: center;
+    }
+
+    .btn1{
+        background-color: white;
+        font-size: larger;
+        padding: 10px 10px;
+        margin: 5px 5px;
+        border-radius: 10px;
+        border-color: rgb(4, 197, 197);
+        color: rgb(4, 197, 197);
+        font-weight: bolder;
+    }
+
+    .btn1:hover{
+        background-color: rgb(4, 197, 197);
+        color: white;
+    }
+    
+    /* ------------------------- */
+    .bmi{
+        display: inline-block;
+        border: 2px solid black;
+        width:1345px;
+        height: 500px;
     }
     
