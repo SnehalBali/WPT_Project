@@ -5,10 +5,12 @@
 }
 
 .header {
+    margin: 2px;
+    padding: 2px;
     background-image: linear-gradient(#F9E7FE,#DAFCFC);
-    /* background-image: url("headimage.jpg"); */
+    /* background-image: url("header.jpg"); */
     /* border: 10px solid rgb(31, 12, 29); */
-    /* background-image: url("https://www.citizenshospitals.com/wp-content/uploads/2017/04/medical-doctor-stethoscope-and-office-sign-web-header-1.jpg"); */
+    /* background-image: url("https://www.citizenshospitals.com/wp-content/uploads/2017/04/medical-doctor-stethoscope-and-office-sign-web-header-1.jpg"); */ */
 
 
 
@@ -26,10 +28,12 @@
     border: 4px solid rgb(0, 0, 0); 
     display: inline-block;
     position: absolute;
-    right: 220px;
-    top: 80px;
+    font-weight: bolder;
+    right: 225px;
+    top: 50px;
     width: fit-content;
     font-size: x-large;
+   
    
 
 }
@@ -60,6 +64,9 @@
 }
 
 /* Dropdown button */
+.dropbtn{
+    font-weight: bold;
+}
 .dropdown, .dropbtn {
     font-size: x-large;
     border: none;
@@ -265,7 +272,9 @@ padding: 20px 22px;
         grid-template-columns: auto auto;
         padding: 1px;
     }
-
+    h4{
+        color: rgba(0, 225, 255, 0.973);
+    }
     .grid-item{
         /* border: 1px solid black; */
         padding: 20px;
@@ -300,10 +309,21 @@ padding: 20px 22px;
     }
     
     /* ------------------------- */
-    .bmi{
-        display: inline-block;
+    /* .bmi{
+        display: block;
         border: 2px solid black;
-        width:1345px;
+        width:1350px;
         height: 500px;
+    } */
+    .bmiblock{
+        /* border: 2px solid red; */
+        background-image: url(bmip.jpg);
+        background-repeat: no-repeat;
+        display: block;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
     }
+   /* ----------------Map css-------------------------- */
+   
     

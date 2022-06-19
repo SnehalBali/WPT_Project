@@ -1,41 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI</title>
+ 
 </head>
 <link rel="stylesheet" href="HMS_style.css">
+>
+
 <body>
-    <header class="header">
-        <div class="left">
-          <img src="hmsicon.png" alt="icon" width="80px" height="80px">
-          <div>Hospital</div>
-        </div>
-        <div class="mid">
-          <nav>
-            <a href="">HOME</a>
-            <span class="dropdown">
-              <button class="dropbtn">SERVICES</button>
-              <div class="dropcontent">
-                <a href="">Dental and Oral Surgery</a>
-                <a href="">Pathology</a>
-                <a href="">Pulmonology</a>
-              </div>
-            </span>
-            <a href="">DOCTOR</a>
-            <a href="">APPOINTMENT</a>
-            <a href="">ABOUT US</a>
-            <a href="">HELP</a>
-          </nav>
-        </div>
-        <div class="right">
-          <a href="https://www.google.com"><img src="erlogo.png" alt="erlogo"></a>
-        </div>
-      </header>
-      <hr>
-      <img src="BMI.png" alt="bmi" class="bmi">
-      <hr>
+  <header class="header">
+    <div class="left">
+      <img src="hmsicon.png" alt="icon" width="80px" height="80px">
+      <div>Hospital</div>
+    </div>
+    <div class="mid">
+      <nav>
+        <a href="HMS.html">HOME</a>
+        <span class="dropdown">
+          <button class="dropbtn">SERVICES</button>
+          <div class="dropcontent">
+            <a href="">Dental and Oral Surgery</a>
+            <a href="">Pathology</a>
+            <a href="">Pulmonology</a>
+            <a href="">Orthopedic</a>
+            <a href="">Medicine</a>
+          </div>
+        </span>
+        <a href="">DOCTOR</a>
+        <a href="">APPOINTMENT</a>
+        <a href="">ABOUT US</a>
+        <a href="">HELP</a>
+      </nav>
+    </div>
+    <div class="right">
+      <a href="https://www.google.com"><img src="erlogo.png" alt="erlogo"></a>
+    </div>
+  </header>
+  <hr>
+  <div class="bmiblock">
+
+  </div>
+  <hr><br>
+  <div>
+    <h3 style="text-align: center;">BODY MASS INDEX CALCULATOR</h3>
+  </div><br>
+  <hr>
+  <form action="bmi">
+    <label for="weight">Your Weight (in Kg):</label><br>
+    <input type="text" name="Your Weight" id="weight"><br><br>
+    <label for="weight">Your Height (in cm):</label><br>
+    <input type="text" name="Your Height" id="height"><br><br>
+    <input type="button" value="CALCULATE BMI" id="bmibtn"><br>
+    <label for="bmi">
+      <h3>Your BMI:</h3>
+    </label><br>
+    <input type="text" name="" id="bmi"><br>
+    <label for="bmitxt">This Means:</label><br>
+    <input type="text" name="" id="bmitxt">
+  </form>
+
+ 
+  <!-- ---------------Script------------------------ -->
+  <script>
+    window.document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#bmibtn').addEventListener('click', () => {
+        let wt = document.querySelector('#weight').value
+        let ht = document.querySelector('#height').value
+        let output = document.querySelector('#bmi');
+        let result = document.querySelector('#bmitxt');
+        output.value = cal(wt, ht).toFixed(3);
+        if (output.value < 18.5) {
+          result.value = "UNDERWEIGHT";
+        }
+        else if (output.value > 18.5 && output.value < 24.99) {
+          result.value = "NORMAL";
+        }
+        else if (output.value > 25 && output.value < 29.99) {
+          result.value = "OVERWEIGHT";
+        }
+        else {
+          result.value = "OBESITY";
+        }
+      });
+      function cal(a, b) {
+        let r = (Number(a) / ((Number(b)) * (Number(b)))) * 10000;
+        return r;
+      }
+    });
+  </script>
 </body>
+
 </html>
