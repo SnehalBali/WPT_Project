@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="feedback.css">
+<link rel="stylesheet" href="HMS_style_pre.css">
+
+<body>
+ 
+  <div id="feedback-main">
+    <div id="feedback-div">
+      <form action="contact.php" method="post" class="form" id="feedback-form1" name="form1"
+        enctype="multipart/form-data">
+
+        <div class="aa">
+          <p class="name">
+            <input name="name" type="name" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+              required placeholder="Name" id="feedback-name" />
+          </p>
+
+          <p class="email">
+            <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="feedback-email"
+              placeholder="Email" required />
+          </p>
+
+          <p class="text">
+            <textarea name="comment" type="comment" class="validate[required,length[6,300]] feedback-input"
+              id="feedback-comment" required
+              placeholder="Write your feedback here......"></textarea>
+          </p>
+        </div>
+
+        <div class="bb">
+          <table style="border:1; border-color:green" class="form-matrix-table">
+            <!-- 
+     summary="" aria-labelledby="label_4" cellpadding="4" cellspacing="0"
+     data-component="matrix" -->
+            <tr class="tablehead">
+              <th class="tablehead_th" style="border:none"> </th>
+              <th class="th_column_0"><label id="label_0">
+                  Very satisfied </label></th>
+              <th class="th_column_1"><label id="label_1">
+                  Satisfied </label></th>
+              <th class="th_column_2"><label id="label_2">
+                  Neutral </label></th>
+              <th class="th_column_3"><label id="label_3">
+                  Unsatisfied </label></th>
+              <th class="th_column_4"><label id="label_4">
+                  Very unsatisfied </label></th>
+            </tr>
+            <tr class="tablevalue" aria-labelledby="label_4 label_4_row_0">
+              <th class="tablevalue_th"><label id="label_4_row_0"> Doctor
+                  Knowledge </label></th>
+              <td class="tablevalue_th_values"><input type="radio" id="input_0_0" class="form-radio" name="rbtn_0"
+                  value="Very satisfied" /><label for="input_0_0" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_0_1" class="form-radio" name="rbtn_0"
+                  value="Satisfied" /><label for="input_0_1" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_0_2" class="form-radio" name="rbtn_0"
+                  value="Neutral" /><label for="input_0_2" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_0_3" class="form-radio" name="rbtn_0"
+                  value="Unsatisfied" /><label for="input_0_3" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_0_4" class="form-radio" name="rbtn_0"
+                  value="Very unsatisfied" /><label for="input_0_4" class="radio-label"> </label></td>
+            </tr>
+            <tr class="tablevalue">
+              <th class="tablevalue_th"><label id="label_4_row_1"> Doctor
+                  Kindness </label></th>
+              <td class="tablevalue_th_values"><input type="radio" id="input_1_0" class="form-radio" name="rbtn_1"
+                  value="Very satisfied" /><label for="input_1_0" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_1_1" class="form-radio" name="rbtn_1"
+                  value="Satisfied" /><label for="input_1_1" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_1_2" class="form-radio" name="rbtn_1"
+                  value="Neutral" /><label for="input_1_2" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_1_3" class="form-radio" name="rbtn_1"
+                  value="Unsatisfied" /><label for="input_1_3" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_1_4" class="form-radio" name="rbtn_1"
+                  value="Very unsatisfied" /><label for="input_1_4" class="radio-label"> </label></td>
+            </tr>
+            <tr class="tablevalue">
+              <th class="tablevalue_th"><label id="label_4_row_2"> Nurse
+                  Patience </label></th>
+              <td class="tablevalue_th_values"><input type="radio" id="input_2_0" class="form-radio" name="rbtn_2"
+                  value="Very satisfied" /><label for="input_2_0" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_2_1" class="form-radio" name="rbtn_2"
+                  value="Satisfied" /><label for="input_2_1" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_2_2" class="form-radio" name="rbtn_2"
+                  value="Neutral" /><label for="input_2_2" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_2_3" class="form-radio" name="rbtn_2"
+                  value="Unsatisfied" /><label for="input_2_3" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_2_4" class="form-radio" name="rbtn_2"
+                  value="Very unsatisfied" /><label for="input_2_4" class="radio-label"> </label></td>
+            </tr>
+            <tr class="tablevalue">
+              <th class="tablevalue_th"><label id="label_4_row_3"> Nurse
+                  Knowledge </label></th>
+              <td class="tablevalue_th_values"><input type="radio" id="input_3_0" class="form-radio" name="rbtn_3"
+                  value="Very satisfied" /><label for="input_3_0" class="radio-label"> </label></td>
+              <td class="form-matrix-values"><input type="radio" id="input_3_1" class="form-radio" name="rbtn_3"
+                  value="Satisfied" /><label for="input_3_1" class="radio-label"> </label></td>
+              <td class="form-matrix-values"><input type="radio" id="input_3_2" class="form-radio" name="rbtn_3"
+                  value="Neutral" /><label for="input_3_2" class="radio-label"> </label></td>
+              <td class="form-matrix-values"><input type="radio" id="input_3_3" class="form-radio" name="rbtn_3"
+                  value="Unsatisfied" /><label for="input_3_3" class="radio-label"> </label></td>
+              <td class="form-matrix-values"><input type="radio" id="input_3_4" class="form-radio" name="rbtn_3"
+                  value="Very unsatisfied" /><label for="input_3_4" class="radio-label"> </label></td>
+            </tr>
+            <tr class="tablevalue">
+              <th class="tablevalue_th"><label id="label_4_row_4"> Waiting
+                  Time
+                </label></th>
+              <td class="tablevalue_th_values"><input type="radio" id="input_4_0" class="form-radio" name="rbtn_4"
+                  value="Very satisfied" /><label for="input_4_0" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_4_1" class="form-radio" name="rbtn_4"
+                  value="Satisfied" /><label for="input_4_1" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_4_2" class="form-radio" name="rbtn_4"
+                  value="Neutral" /><label for="input_4_2" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_4_3" class="form-radio" name="rbtn_4"
+                  value="Unsatisfied" /><label for="input_4_3" class="radio-label"> </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_4_4" class="form-radio" name="rbtn_4"
+                  value="Very unsatisfied" /><label for="input_4_4" class="radio-label"> </label></td>
+            </tr>
+            <tr class="tablevalue">
+              <th class="tablevalue_th"><label id="label_4_row_5"> Hygiene
+                </label></th>
+              <td class="tablevalue_th_values"><input type="radio" id="input_5_0" class="form-radio"
+                  name="rbtn_5" value="Very satisfied" /><label for="input_5_0" class="radio-label">
+                </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_5_1" class="form-radio"
+                  name="rbtn_5" value="Satisfied" /><label for="input_5_1" class="radio-label">
+                </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_5_2" class="form-radio"
+                  name="rbtn_5" value="Neutral" /><label for="input_5_2" class="radio-label">
+                </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_5_3" class="form-radio"
+                  name="rbtn_5" value="Unsatisfied" /><label for="input_5_3" class="radio-label">
+                </label></td>
+              <td class="tablevalue_th_values"><input type="radio" id="input_5_4" class="form-radio"
+                  name="rbtn_5" value="Very unsatisfied" /><label for="input_5_4"
+                  class="radio-label"> </label></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="feedback-submit">
+          <input type="submit" value="SEND" id="feedback-button-blue" />
+          <div class="feedback-ease"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <button id="popup" class="feedback-button" onclick="toggle_visibility()">Feedback</button>
+  <a href="HMS.html" style="font-weight: bolder;">Home</a>
+  <script src="feedback.js"></script>
+</body>
+
+</html>

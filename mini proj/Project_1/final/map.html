@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="HMS_style.css">
+<body>
+    <header class="header">
+        <div class="left">
+          <img src="hmsicon.png" alt="icon" width="80px" height="80px">
+          <div>Hospital</div>
+        </div>
+        <div class="mid">
+          <nav>
+            <a href="HMS.html">HOME</a>
+            <span class="dropdown">
+              <button class="dropbtn">SERVICES</button>
+              <div class="dropcontent">
+                <a href="">Dental and Oral Surgery</a>
+                <a href="">Pathology</a>
+                <a href="">Pulmonology</a>
+                <a href="">Orthopedic</a>
+                <a href="">Medicine</a>
+              </div>
+            </span>
+            <a href="">DOCTOR</a>
+            <a href="">APPOINTMENT</a>
+            <a href="">ABOUT US</a>
+            <a href="">HELP</a>
+          </nav>
+        </div>
+        <div class="right">
+          <a href="https://www.google.com"><img src="erlogo.png" alt="erlogo"></a>
+        </div>
+      </header>
+      <br>
+      <hr>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.859782415198!2d73.05205751413757!3d19.025899387116638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c24cce39457b%3A0x8bd69eab297890b0!2sCentre%20for%20Development%20of%20Advanced%20Computing%20(CDAC)!5e0!3m2!1sen!2sin!4v1655585587751!5m2!1sen!2sin" width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <br>
+      <hr>
+     <div style="border:2px solid blue ; padding: 20px; margin:5px;">
+        <div id="container" class="mb-4">
+          <div class="card border-primary">
+            <div class="card-body">
+              <h4 class="card-title" style="text-align: center;">Contact Us</h4>
+            </div>
+          </div>
+       
+         <form action="" style="margin: 5px;">
+          <div class="mb-3">
+            <label for="cname" class="form-label">Name: </label>
+            <input type="text" name="" class="form-control" id="cname">
+          </div>
+          <div class="mb-3">
+            <label for="cmail" class="form-label">Email Address: </label>
+            <input type="email" name="" class="form-control" id="cmail">
+          </div>
+          <div class="mb-3">
+            <label for="ccontact" class="form-label">Contact Number: </label>
+            <input type="text" name="" class="form-control" id="ccontact">
+          </div>
+          <div class="mb-3">
+            <label for="csubject" class="form-label">Subject: </label>
+            <input type="text" name="" class="form-control" id="csubject">
+          </div>
+          <div class="mb-3"> 
+            <label for="cmessage" class="form-label">Message: </label>
+            <input type="text" name="" class="form-control" id="cmessage">
+          </div>
+          <input name="" id="cbtn" class="btn btn-primary" type="button" value="Submit" style="width: 100%;">
+         </form>
+        </div>
+
+         <!-- footer -->
+         <div class="b-example-divider"></div>
+
+
+         <div class="container" style="background-color: rgba(128, 128, 128, 0);">
+           <footer class="py-5">
+             <div class="row">
+               <div class="col-6 col-md-2 mb-3">
+                 <h5>Section</h5>
+                 <ul class="nav flex-column">
+                   <li class="nav-item mb-2"><a href="HMS.html" class="nav-link p-0 text-muted">Home</a></li>
+                   <li class="nav-item mb-2"><a href="Doctors.html" class="nav-link p-0 text-muted">DOCTOR</a></li>
+                   <li class="nav-item mb-2"><a href="Appointment.html" class="nav-link p-0 text-muted">REGISTRATION</a></li>
+                   <li class="nav-item mb-2"><a href="AboutUs.html" class="nav-link p-0 text-muted">ABOUT US</a></li>
+                   <li class="nav-item mb-2"><a href="signin.html" class="nav-link p-0 text-muted">login</a></li>
+                 </ul>
+               </div>
+         
+               <div class="col-6 col-md-2 mb-3">
+                 <h5></h5>
+                 <ul class="nav flex-column">
+                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                 </ul>
+               </div>
+         
+              
+         
+               <div class="col-md-5 offset-md-1 mb-3">
+                 <form>
+                   <h5>Subscribe to our newsletter</h5>
+                   <p>Monthly digest of what's new and exciting from us.</p>
+                   <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                     <label for="newsletter1" class="visually-hidden">Email address</label>
+                     <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                     <button class="btn btn-primary" type="button">Subscribe</button>
+                   </div>
+                 </form>
+               </div>
+             </div>
+         
+             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+               <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+               <ul class="list-unstyled d-flex">
+                 <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                 <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                 <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+               </ul>
+             </div>
+           </footer>
+         </div>
+         
+         
+             <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

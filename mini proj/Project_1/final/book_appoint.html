@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="HMS_style.css">
+
+<body>
+    <header class="header">
+        <div class="left">
+          <img src="hmsicon.png" alt="icon" width="80px" height="80px">
+          <div>Hospital</div>
+        </div>
+        <div class="mid">
+          <nav>
+            <a href="HMS.html">HOME</a>
+            <span class="dropdown">
+              <button class="dropbtn">SERVICES</button>
+              <div class="dropcontent">
+                <a href="">Dental and Oral Surgery</a>
+                <a href="">Pathology</a>
+                <a href="">Pulmonology</a>
+                <a href="">Orthopedic</a>
+                <a href="">Medicine</a>
+              </div>
+            </span>
+            <a href="Doctors.html">DOCTOR</a>
+            <a href="Appointment.html">REGISTRATION</a>
+            <a href="AboutUs.html">ABOUT US</a>
+            <a href="signin.html">LOGIN</a>
+          </nav>
+        </div>
+        <div class="right">
+          <a href="https://www.google.com"><img src="erlogo.png" alt="erlogo"></a>
+        </div>
+      </header>
+
+    <main class="bcimage">
+    <img id="wecareimg" src="wecareimg.png" alt="coudn't load we care">
+    <div class="appointRegister">
+
+        <div class="register">
+            <h1> Appointment Form </h1>
+        </div>
+
+        <div class="appoint">
+
+            <!-- <form action="#" id="appoint"> -->
+                <div class="fname"  style="text-align: centre;"> <label for="fname"> First Name</label><span class="red" style="color: red;">*</span>
+                    <input id="fname" type="text" required>
+                </div>
+
+                <div class="lname" style="text-align: centre;"> <label for="lname"> Last Name</label><span class="red" style="color: red;">*</span>
+                    <input id="lname" type="text" required>
+                </div>
+
+                <!-- <br><br> -->
+
+                <div class="gender" style="text-align: centre;"> <label for="gender"> Gender</label><span class="red" style="color: red;">*</span>
+                    <select name="gender" id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="dob" style="text-align: centre;"> <label for="dob"> Date of Birth</label>
+                    <input id="dob" type="date">
+                </div>
+
+                <!-- <br><br> -->
+
+                <div class="age" style="text-align: centre;"><label for="age"> Age</label>
+                    <input id="age" type="number">
+                </div>
+
+                <div class="contact" style="text-align: centre;"><label for="contact"> Contact No.</label><span class="red"
+                        style="color: red;">*</span>
+                    <input id="contact" type="text" required>
+                </div>
+                <!-- <br><br> -->
+
+                <div class="nationality" style="text-align: centre;"><label for="nationality"> Nationality</label><span class="red"
+                        style="color: red;">*</span>
+                    <select name="nation" id="nationality" required>
+                        <option value="africa">Africa</option>
+                        <option value="australia">Australia</option>
+                        <option value="bangladesh">Bangladesh</option>
+                        <option value="bhutan">Bhutan</option>
+                        <option value="canada">Canada</option>
+                        <option value="denmark">Denmark</option>
+                        <option value="india" selected>India</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="japan">Japan</option>
+                    </select>
+                </div>
+
+                <div class="email" style="text-align: centre;"><label for="email"> Email</label><span class="red" style="color: red;">*</span>
+                    <input id="email" type="email" required>
+                </div>
+
+            <!-- </form> -->
+
+        </div>
+
+    </div>
+     <input id="submitbtn" type="submit" value="Submit">
+    </main>
+
+    <!-- <br><br><br> -->
+
+    <!-- <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        </div>
+    </div> -->
+    <script src="book_appoint.js"></script>
+</body>
+
+</html>
